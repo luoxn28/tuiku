@@ -16,4 +16,4 @@ hs_err_pid*
 out/
 
 tuiku.iml
-db.properties
+mysql.properties
