@@ -31,6 +31,7 @@ public class BlogService {
 
         if (p > 0) {
             Blog blog = blogDao.getById(p);
+            blogDao.updateReadCount(blog.getId(), blog.getReadCount() + 1);
             map.put("blog", blog);
         }
         return ("blog");

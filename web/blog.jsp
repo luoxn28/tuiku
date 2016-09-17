@@ -31,8 +31,14 @@
             <small>Posted by <a href="#">${blog.author}</a></small>
           </blockquote>
           <p>${blog.text}</p>
-          <p>Posted by <a href="#">${blog.author}</a> on ${blog.date}</p>
-          <!--hr class="col-lg-9 col-md-9 col-sm-9"/-->
+          <small class="text-right">
+            <hr class="row"/>
+            <p>
+              阅读(${blog.readCount}) 评论(0)
+              <a class="text-right" href="#">编辑</a> <a class="text-right" href="#">收藏</a><br/>
+              Posted by <a href="#">${blog.author}</a> on ${blog.date}
+            </p>
+          </small>
         </div>
       </div>
 

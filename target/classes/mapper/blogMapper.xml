@@ -8,6 +8,10 @@
         VALUES(#{birth}, #{title}, #{author}, #{preview}, #{text}, #{category}, #{date}, #{birthUrl}, #{readCount}, #{authorId})
     </insert>
 
+    <update id="updateReadCount">
+        UPDATE blog SET readcount=#{readCount} where id=#{id}
+    </update>
+
     <select id="getById" parameterType="int" resultType="com.tuiku.dao.Blog">
         SELECT * FROM blog WHERE id=#{id};
     </select>
