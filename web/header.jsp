@@ -11,8 +11,8 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li><a href="#">博客</a></li>
-          <li><a href="#">站点</a></li>
+          <li><a href="#">文章</a></li>
+          <li><a href="/site">站点</a></li>
           <li><a href="#">主题</a></li>
           <li><a href="#">公开课</a></li>
           <li class="dropdown">

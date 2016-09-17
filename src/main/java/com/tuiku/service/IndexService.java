@@ -99,4 +99,12 @@ public class IndexService {
         return "post";
     }
 
+    /**
+     * 站点服务
+     */
+    @RequestMapping("/site")
+    public String site() {
+        return "site";
+    }
+
 }
