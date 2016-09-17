@@ -35,9 +35,14 @@ public class RegisterService {
 
         User user = new User(name, password, sex, email, phone);
 
-        System.out.println(user);
+        // 用户信息写到数据库
         userDao.insert(user);
-        return "redirect:/index";
+
+        map.put("info", user.getName() + "，你好，组成成功，3s后跳转到登录页面");
+        response.addHeader("refresh", "3;url=" + request.getContextPath() + "/login");
+
+        //return "redirect:/index";
+        return "info";
     }
 
 }
