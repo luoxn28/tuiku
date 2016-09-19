@@ -33,26 +33,15 @@
 
     <div class="col-lg-10 col-md-10 col-sm-10">
       <div class="row text-center">
-        <div class="jumbotron site-block col-lg-3 col-md-3 col-sm-3">
-          <h4>知乎</h4>
-          <small>一个神奇的网站一个神奇的网站</small>
-          <p><a class="btn btn-primary" href="#" role="button">Learn more</a></p>
-        </div>
-        <div class="jumbotron site-block col-lg-3 col-md-3 col-sm-3">
-          <h4>知乎</h4>
-          <small>一个神奇的网站</small>
-          <p><a class="btn btn-primary" href="#" role="button">Learn more</a></p>
-        </div>
-        <div class="jumbotron site-block col-lg-3 col-md-3 col-sm-3">
-          <h4>知乎</h4>
-          <small>一个神奇的网站</small>
-          <p><a class="btn btn-primary" href="#" role="button">Learn more</a></p>
-        </div>
-        <div class="jumbotron site-block col-lg-3 col-md-3 col-sm-3">
-          <h4>知乎</h4>
-          <small>一个神奇的网站</small>
-          <p><a class="btn btn-primary" href="#" role="button">Learn more</a></p>
-        </div>
+
+        <c:forEach var="site" items="${sites}">
+          <div class="jumbotron site-block col-lg-3 col-md-3 col-sm-3">
+            <h4>${site.name}</h4>
+            <small>${site.brief}</small>
+            <p><a class="btn btn-primary" href="${site.url}" role="button">Learn more</a></p>
+          </div>
+        </c:forEach>
+
       </div>
     </div>
   </div>

@@ -5,5 +5,6 @@
     <mappers>
         <mapper resource="mapper/blogMapper.xml"/>
         <mapper resource="mapper/userMapper.xml"/>
+        <mapper resource="mapper/siteMapper.xml"/>
     </mappers>
 </configuration>
