@@ -41,6 +41,8 @@ CREATE TABLE site (
 
 insert site (category, name, url, brief, userId)
   values(0, '知乎', 'https://www.zhihu.com/', '一个高质量问答社区', 1);
+insert site (category, name, url, brief, userId)
+  values(1, 'ImportNew', 'http://www.importnew.com/', '一个Java&Android技术分享网站', 1);
 
 insert blog (birth, title, author, preview, text, category, date, readCount, authorId)
     values(0, 'Java学习笔记', '骆向南', 'Java笔记', 'Java IO、集合、多线程、框架', 'Java',

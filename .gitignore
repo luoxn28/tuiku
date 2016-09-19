@@ -13,6 +13,7 @@ hs_err_pid*
 
 # Dir
 .idea/
+target/
 out/
 
 tuiku.iml

@@ -25,10 +25,10 @@
   <div class="row">
     <h3>收藏站点</h3> <hr/>
     <div class="col-lg-2 col-md-2 col-sm-2">
-      <a class="btn btn-default btn-block" href="#" role="button">热门站点</a>
-      <a class="btn btn-default btn-block" href="#" role="button">语言类</a>
-      <a class="btn btn-default btn-block" href="#" role="button">计算机网络</a>
-      <a class="btn btn-default btn-block" href="#" role="button">架构</a>
+      <a class="btn btn-default btn-block" href="/sites?category=0" role="button">热门站点</a>
+      <a class="btn btn-default btn-block" href="/sites?category=1" role="button">语言类</a>
+      <a class="btn btn-default btn-block" href="/sites?category=2" role="button">计算机网络</a>
+      <a class="btn btn-default btn-block" href="/sites?category=3" role="button">架构</a>
     </div>
 
     <div class="col-lg-10 col-md-10 col-sm-10">
