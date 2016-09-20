@@ -26,6 +26,9 @@ public class PostService {
     @Autowired
     BlogDao blogDao;
 
+    /**
+     * 写博客操作
+     */
     @RequestMapping("/dopost")
     public String post(HttpServletRequest request, HttpServletResponse response, Map<String, Object> map) {
         int userId = CookieUtil.getUserCookie(request);

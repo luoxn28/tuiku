@@ -3,6 +3,11 @@
 
 <mapper namespace="com.tuiku.dao.SiteDao">
 
+    <insert id="insert" parameterType="com.tuiku.dao.Site">
+        INSERT site (category, name, url, brief, date, userId)
+        VALUES(#{category}, #{name}, #{url}, #{brief}, #{date}, #{userId})
+    </insert>
+
     <select id="getAllByCategory" resultType="com.tuiku.dao.Site">
         SELECT * FROM site where category=#{category};
     </select>

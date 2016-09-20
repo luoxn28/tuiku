@@ -43,6 +43,31 @@
         </c:forEach>
 
       </div>
+
+      <div class="row">
+        <!-- admin可以添加站点 -->
+        <c:if test="${admin != null}">
+          <div class="col-lg-5 col-md-5 col-sm-5 col-center-block">
+            <hr class="row"/>
+            <form class="form-signin" action="/siteadd" method="post">
+              <h4 class="form-signin-heading">添加新站点</h4>
+              <hr/>
+              <label for="name" class="sr-only">站点名称</label>
+              <input type="text" name="name" id="name" class="form-control" placeholder="站点名称" required autofocus>
+              <label for="brief" class="sr-only">站点简介</label>
+              <input type="text" name="brief" id="brief" class="form-control" placeholder="站点简介" required autofocus>
+              <label for="url" class="sr-only">站点url</label>
+              <input type="text" name="url" id="url" class="form-control" placeholder="站点url" required autofocus>
+              分类: <select name="category">
+                <option value="0">热门站点</option>
+                <option value="1">语言类</option>
+              </select>
+
+              <button class="btn btn-primary btn-block site-add-submit" type="submit">提交</button>
+            </form>
+          </div>
+        </c:if>
+      </div>
     </div>
   </div>
 </div>

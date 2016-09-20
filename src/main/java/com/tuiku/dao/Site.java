@@ -9,21 +9,20 @@ public class Site {
     private int    category; // site种类
     private String name;     // site名称
     private String url;      // site url
-    private String brief;    // site简洁
+    private String brief;    // site简介
     private String date;     // site编辑日期
     private int    userId;   // site编辑用户id
 
     public Site() {
     }
 
-    public Site(int category, String name, String url, String brief, String date, int userId, int id) {
+    public Site(int category, String name, String url, String brief, String date, int userId) {
         this.category = category;
         this.name = name;
         this.url = url;
         this.brief = brief;
         this.date = date;
         this.userId = userId;
-        this.id = id;
     }
 
     public int getId() {

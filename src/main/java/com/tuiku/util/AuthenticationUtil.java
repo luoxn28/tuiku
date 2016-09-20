@@ -48,4 +48,22 @@ public class AuthenticationUtil {
         }
     }
 
+    public static User getUserByCookieAndSession(HttpServletRequest request, Map<String, Object> map) {
+        User user = null;
+
+        int userId = CookieUtil.getUserCookie(request);
+        if (userId > 0) {
+            // 用户已经登录
+            user = SessionUtil.getUserSession(request, userId);
+            if (user != null) {
+                map.put("user", user);
+                if (user.getAdmin().equals("admin")) {
+                    map.put("admin", user);
+                }
+            }
+        }
+
+        return user;
+    }
+
 }
