@@ -25,6 +25,8 @@
               <li><a href="#">我的微博</a></li>
               <li role="separator" class="divider"></li>
               <li><a href="/luoxn28/luoxn28.html">我的主页</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="https://github.com/luoxn28/tuiku">tuiku网站源码</a></li>
             </ul>
           </li>
         </ul>
