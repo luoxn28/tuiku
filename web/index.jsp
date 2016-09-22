@@ -25,7 +25,7 @@
       <div class="row" padding="">
         <div class="col-lg-9 col-md-9 col-sm-9">
           <div class="row">
-            <strong>热门文章</strong> <br/>
+            <strong>最新文章</strong> <br/>
             <hr class="col-lg-9 col-md-9 col-sm-9"/>
           </div>
 
@@ -38,6 +38,20 @@
               <hr class="col-lg-9 col-md-9 col-sm-9"/>
             </div>
           </c:forEach>
+
+          <!-- 翻页功能 -->
+          <nav>
+            <ul class="pagination">
+              <li class=""><a href="/index?index=prev">&laquo;</a></li>
+              <li class=""><a href="/index?index=1">1</a></li>
+              <li class=""><a href="/index?index=2">2</a></li>
+              <li class=""><a href="/index?index=3">3</a></li>
+              <li class=""><a href="/index?index=4">4</a></li>
+              <li class=""><a href="/index?index=5">5</a></li>
+              <li class=""><a href="#">...</a></li>
+              <li class=""><a href="/index?index=next">&raquo;</a></li>
+            </ul>
+          </nav>
         </div>
 
         <div class="col-lg-3 col-md-3 col-sm-3">
