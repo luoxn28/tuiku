@@ -39,10 +39,23 @@ CREATE TABLE site (
   userId int
 );
 
+DROP TABLE IF EXISTS openclass;
+CREATE TABLE openclass (
+  id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(32) NOT NULL,
+  url VARCHAR(256),
+  brief VARCHAR(256),
+  date TIMESTAMP DEFAULT '2016-05-20 05:20:00',
+  userId int
+);
+
 insert site (category, name, url, brief, userId)
   values(0, '知乎', 'https://www.zhihu.com/', '一个高质量问答社区', 1);
 insert site (category, name, url, brief, userId)
   values(1, 'ImportNew', 'http://www.importnew.com/', '一个Java&Android技术分享网站', 1);
+
+insert openclass (name, url, brief, userId)
+  values('网易公开课', 'https://open.163.com/', '一个高质量学习网站', 1);
 
 insert blog (birth, title, author, preview, text, category, date, readCount, authorId)
     values(0, 'Java学习笔记', '骆向南', 'Java笔记', 'Java IO、集合、多线程、框架', 'Java',

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.tuiku.dao.OpenClassDao">
+
+    <insert id="insert" parameterType="com.tuiku.dao.OpenClass">
+        INSERT openclass (name, url, brief, date, userId)
+        VALUES(#{name}, #{url}, #{brief}, #{date}, #{userId})
+    </insert>
+
+    <select id="getAll" resultType="com.tuiku.dao.OpenClass">
+        SELECT * FROM openclass;
+    </select>
+
+</mapper>

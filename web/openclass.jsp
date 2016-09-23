@@ -27,14 +27,7 @@
 
     <div class="crow">
       <div class="row text-center">
-
-          <div class="jumbotron openclass-div col-lg-3 col-md-3 col-sm-3">
-            <h4>网易公开课</h4>
-            <small>中国最好的公开课程网站</small>
-            <p><a class="btn btn-primary" href="http://open.163.com/" role="button">进入</a></p>
-          </div>
-
-        <c:forEach var="openclass" items="${openclasses}">
+        <c:forEach var="openclass" items="${openClasses}">
           <div class="jumbotron openclass-div col-lg-3 col-md-3 col-sm-3">
             <h4>${openclass.name}</h4>
             <small>${openclass.brief}</small>
@@ -49,15 +42,15 @@
         <c:if test="${admin != null}">
           <div class="col-lg-5 col-md-5 col-sm-5 col-center-block">
             <hr class="row"/>
-            <form class="form-signin" action="/#" method="post">
+            <form class="form-signin" action="/openclassadd" method="post">
               <h4 class="form-signin-heading">添加新的公开课</h4>
               <hr/>
-              <label for="name" class="sr-only">站点名称</label>
-              <input type="text" name="name" id="name" class="form-control" placeholder="站点名称" required autofocus>
-              <label for="brief" class="sr-only">站点简介</label>
-              <input type="text" name="brief" id="brief" class="form-control" placeholder="站点简介" required autofocus>
-              <label for="url" class="sr-only">站点url</label>
-              <input type="text" name="url" id="url" class="form-control" placeholder="站点url" required autofocus>
+              <label for="name" class="sr-only">公开课名称</label>
+              <input type="text" name="name" id="name" class="form-control" placeholder="公开课名称" required autofocus>
+              <label for="brief" class="sr-only">公开课简介</label>
+              <input type="text" name="brief" id="brief" class="form-control" placeholder="公开课简介" required autofocus>
+              <label for="url" class="sr-only">公开课url</label>
+              <input type="text" name="url" id="url" class="form-control" placeholder="公开课url" required autofocus>
             </select>
 
               <button class="btn btn-primary btn-block site-add-submit" type="submit">提交</button>
