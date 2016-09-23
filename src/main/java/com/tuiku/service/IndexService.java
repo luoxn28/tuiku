@@ -69,7 +69,7 @@ public class IndexService {
         if (endIndex > blogSize) {
             endIndex = blogSize;
         }
-        
+
         map.put("blogs", blogs.subList(startIndex, endIndex));
         return ("index");
     }

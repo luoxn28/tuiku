@@ -18,3 +18,15 @@
 .site-add-submit {
     margin-top: 10px;
 }
+
+.openclass-div {
+    height: 200px;
+
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    background: url(../img/openclass-background.jpg);
+    background-size: 100%;
+    background-color:transparent;
+}
