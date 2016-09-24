@@ -46,7 +46,7 @@ public class SiteService {
      * 站点查询服务
      */
     @RequestMapping("sites")
-    public String about(@RequestParam(value="category")int category, HttpServletRequest request,
+    public String sites(@RequestParam(value="category")int category, HttpServletRequest request,
                         Map<String, Object> map) {
         // 登录检测
         AuthenticationUtil.hasCookieAndSession(request, map);
@@ -77,12 +77,10 @@ public class SiteService {
         String date = format.format(new Date());
         Site site = new Site(Integer.valueOf(category), name, url, brief, date, user.getId());
 
-        System.out.println(site);
         siteDao.insert(site);
-
-        List<Site> sites = siteDao.getAllByCategory(0);
-
-        map.put("sites", sites);
+//        List<Site> sites = siteDao.getAllByCategory(0);
+//
+//        map.put("sites", sites);
 
         return "redirect:/site";
     }

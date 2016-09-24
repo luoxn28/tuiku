@@ -31,14 +31,6 @@
 
   <div class="row" padding="">
     <div class="col-lg-9 col-md-9 col-sm-9">
-      <div class="row">
-        <blockquote>
-          <a href="#">Nginx源码分析</a>
-          <p>Nginx，一个高性能服务器</p>
-          <small>学习服务器的好资料</small>
-        </blockquote>
-      </div>
-
       <c:forEach var="theme" items="${themes}">
         <div class="row">
           <blockquote>
@@ -53,6 +45,32 @@
     <div class="col-lg-3 col-md-3 col-sm-3">
       <%@ include file="border.jsp" %>
     </div>
+  </div>
+
+  <div class="row">
+    <!-- admin可以添加站点 -->
+    <c:if test="${admin != null}">
+      <div class="col-lg-5 col-md-5 col-sm-5 col-center-block">
+        <hr class="row"/>
+        <form class="form-signin" action="/themeadd" method="post">
+          <h4 class="form-signin-heading">添加新主题</h4>
+          <hr/>
+          <label for="name" class="sr-only">主题名称</label>
+          <input type="text" name="name" id="name" class="form-control" placeholder="主题名称" required autofocus>
+          <label for="brief" class="sr-only">主题简介</label>
+          <input type="text" name="brief" id="brief" class="form-control" placeholder="主题简介" required autofocus>
+          <label for="url" class="sr-only">主题url</label>
+          <input type="text" name="url" id="url" class="form-control" placeholder="主题url" required autofocus>
+          分类: <select name="category">
+          <option value="0">收藏</option>
+          <option value="1">C/C++</option>
+          <option value="1">Java</option>
+        </select>
+
+          <button class="btn btn-primary btn-block site-add-submit" type="submit">提交</button>
+        </form>
+      </div>
+    </c:if>
   </div>
 
 </div>

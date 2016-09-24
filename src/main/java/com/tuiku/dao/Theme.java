@@ -14,7 +14,7 @@ public class Theme {
     public Theme() {
     }
 
-    public Theme(String name, String url, String brief) {
+    public Theme(int category, String name, String url, String brief) {
         this.name = name;
         this.url = url;
         this.brief = brief;
