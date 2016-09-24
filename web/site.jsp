@@ -61,6 +61,8 @@
               分类: <select name="category">
                 <option value="0">热门站点</option>
                 <option value="1">语言类</option>
+                <option value="1">计算机网络</option>
+                <option value="1">架构</option>
               </select>
 
               <button class="btn btn-primary btn-block site-add-submit" type="submit">提交</button>

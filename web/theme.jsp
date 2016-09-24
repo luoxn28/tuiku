@@ -22,15 +22,12 @@
 
 <!-- Main Content -->
 <div class="container">
-  <!--nav class="navbar navbar-default navbar-static-top" role="navigation">
-    <div class="container"-->
-      <ul class="nav nav-tabs" role="tablist">
-        <li role="presentation"><a href="#">收藏</a></li>
-        <li role="presentation"><a href="#">C/C++</a></li>
-        <li role="presentation"><a href="#">Java</a></li>
-      </ul>
-    <!--/div>
-  </nav-->
+  <!-- 导航栏 -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation"><a href="/themes?category=0">收藏</a></li>
+    <li role="presentation"><a href="/themes?category=1">C/C++</a></li>
+    <li role="presentation"><a href="/themes?category=2">Java</a></li>
+  </ul>
 
   <div class="row" padding="">
     <div class="col-lg-9 col-md-9 col-sm-9">
