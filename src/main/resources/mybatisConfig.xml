@@ -7,5 +7,6 @@
         <mapper resource="mapper/userMapper.xml"/>
         <mapper resource="mapper/siteMapper.xml"/>
         <mapper resource="mapper/openclassMapper.xml"/>
+        <mapper resource="mapper/themeMapper.xml"/>
     </mappers>
 </configuration>

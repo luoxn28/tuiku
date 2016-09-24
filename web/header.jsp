@@ -12,8 +12,8 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
           <li><a href="/">文章</a></li>
+          <li><a href="/theme">主题</a></li>
           <li><a href="/site">站点</a></li>
-          <li><a href="#">主题</a></li>
           <li><a href="/openclass">公开课</a></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -22,7 +22,7 @@
             <ul class="dropdown-menu">
               <li><a href="http://www.cnblogs.com/luoxn28">我的博客</a></li>
               <li><a href="https://github.com/luoxn28">我的GitHub</a></li>
-              <li><a href="#">我的微博</a></li>
+              <li><a href="http://weibo.com/3482940395/">我的微博</a></li>
               <li role="separator" class="divider"></li>
               <li><a href="/luoxn28/luoxn28.html">我的主页</a></li>
               <li role="separator" class="divider"></li>

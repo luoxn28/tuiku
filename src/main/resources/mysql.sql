@@ -49,6 +49,15 @@ CREATE TABLE openclass (
   userId int
 );
 
+DROP TABLE IF EXISTS theme;
+CREATE TABLE theme (
+  id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  category INT NOT NULL,
+  name VARCHAR(32) NOT NULL,
+  url VARCHAR(256),
+  brief VARCHAR(256)
+);
+
 insert site (category, name, url, brief, userId)
   values(0, '知乎', 'https://www.zhihu.com/', '一个高质量问答社区', 1);
 insert site (category, name, url, brief, userId)
@@ -56,6 +65,9 @@ insert site (category, name, url, brief, userId)
 
 insert openclass (name, url, brief, userId)
   values('网易公开课', 'https://open.163.com/', '一个高质量学习网站', 1);
+
+insert theme (category, name, url, brief)
+  values(0, 'Spring框架学习', 'http://www.baidu.com', 'Java中最流行框架之一，Java程序员必学知识~');
 
 insert blog (birth, title, author, preview, text, category, date, readCount, authorId)
     values(0, 'Java学习笔记', '骆向南', 'Java笔记', 'Java IO、集合、多线程、框架', 'Java',

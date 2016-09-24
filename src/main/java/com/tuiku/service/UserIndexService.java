@@ -20,14 +20,14 @@ import java.util.Map;
  * UserIndexService - 用户主页类
  */
 @Controller
-@RequestMapping("/userindex")
+@RequestMapping
 public class UserIndexService {
 
     // blogDao操作类
     @Autowired
     private BlogDao blogDao;
 
-    @RequestMapping
+    @RequestMapping("/userindex")
     public String userIndex(HttpServletRequest request, HttpServletResponse response,
                           Map<String, Object> map) {
         int userId = CookieUtil.getUserCookie(request);
@@ -52,7 +52,7 @@ public class UserIndexService {
         blogs = blogDao.getByUserId(user.getId());
         map.put("blogs", blogs);
 
-        return "index";
+        return "userindex";
     }
 
 }
