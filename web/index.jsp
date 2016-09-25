@@ -34,7 +34,12 @@
             <div class="row">
               <a href="/blog?p=${blog.id}">${blog.title}</a>
               <p>${blog.preview}</p>
-              <p>Posted by <a href="#">${blog.author}</a> on ${blog.date}</p>
+              <c:if test="${blog.authorId != 0}">
+                <p>Posted by <a href="#">${blog.author}</a> on ${blog.date}</p>
+              </c:if>
+              <c:if test="${blog.authorId == 0}">
+                <p>转载于<a href="${blog.birthUrl}">${blog.birthUrl}</a></p>
+              </c:if>
               <hr class="col-lg-9 col-md-9 col-sm-9"/>
             </div>
           </c:forEach>

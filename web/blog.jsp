@@ -28,7 +28,14 @@
         <div class="row">
           <blockquote>
             <a href="#">${blog.title}</a>
-            <small>Posted by <a href="#">${blog.author}</a></small>
+            <small>
+              <c:if test="${blog.authorId != 0}">
+                Posted by <a href="#">${blog.author}</a>
+              </c:if>
+              <c:if test="${blog.authorId == 0}">
+                转载于<a href="${blog.birthUrl}">${blog.birthUrl}</a>
+              </c:if>
+            </small>
           </blockquote>
           <p>${blog.text}</p>
           <small class="text-right">
