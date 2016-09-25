@@ -11,6 +11,7 @@ I've put it on production for my personal blog site on [http://luoxn28.xyz:8080]
 - [MySQL](http://www.mysql.com/)  A popular relational database.
 - [Bootstrap](http://www.bootcss.com/)  A very popular and responsive front-end framework.
 - [UEditor](http://ueditor.baidu.com/website/)  A rich text web editor by baidu.
+- [Maven](http://maven.apache.org/) A software project management and comprehension tool.
 
 ## To use
 Fork tuiku project, download it to local computer.

@@ -16,5 +16,5 @@ hs_err_pid*
 target/
 out/
 
-tuiku.iml
+*.iml
 mysql.properties
