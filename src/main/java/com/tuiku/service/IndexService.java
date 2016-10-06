@@ -25,7 +25,8 @@ public class IndexService {
 
     // 静态数据
     private static int INDEXSIZE = 10;
-    private static int index = 0;
+    // issue #0: 不能用静态数据存储index
+    //private static int index = 0;
 
     // blogDao操作类
     @Autowired
@@ -34,6 +35,7 @@ public class IndexService {
     @RequestMapping("/index")
     public String index(HttpServletRequest request, Map<String, Object> map) {
         List<Blog> blogs = new ArrayList<Blog>();
+        int        index = 0;
 
         // 登录检测
         AuthenticationUtil.hasCookieAndSession(request, map);
@@ -43,25 +45,25 @@ public class IndexService {
         int blogSize = blogs.size();
 
         // 检测当前index数值
-        String index = request.getParameter("index");
-        if (index != null && !index.equals("")) {
-            if (index.equals("prev")) {
-                this.index--;
+        String indexStr = request.getParameter("index");
+        if (indexStr != null && !indexStr.equals("")) {
+            if (indexStr.equals("prev")) {
+                index--;
             }
-            else if (index.equals("next")) {
-                this.index++;
+            else if (indexStr.equals("next")) {
+                index++;
             }
             else {
-                this.index = Integer.valueOf(index);
-                this.index--; // 1表示第一页，表示下标0
+                index = Integer.valueOf(indexStr);
+                index--; // 1表示第一页，表示下标0
             }
 
-            if (this.index < 0) {
-                this.index = 0;
+            if (index < 0) {
+                index = 0;
             }
         }
 
-        int startIndex = INDEXSIZE * this.index;
+        int startIndex = INDEXSIZE * index;
         int endIndex = startIndex + INDEXSIZE;
         if (startIndex > blogSize) {
             startIndex = blogSize;
